@@ -9,9 +9,9 @@ const App = () => {
   const [winner, setWinner] = useState("");
   const [boardIsActive, setBoardIsActive] = useState(true);
 
-  const letterColorClass = `${
-    winner === "X" ? "font--yellow" : "font--pink"
-  }`;
+  const winnerLetterColorClass = `${winner === "X" ? "font--yellow" : "font--pink"}`;
+  const currentLetterColorClass = `${currentPlayer === "X" ? "font--yellow" : "font--pink"}`;
+
   const winnerPatterns = [
     [0, 1, 2],
     [3, 4, 5],
@@ -78,7 +78,7 @@ const App = () => {
             (
                 <h2>
                     The winner is  
-                    <span className={letterColorClass}> {winner}</span>
+                    <span className={winnerLetterColorClass}> {winner}</span>
                 </h2>
             )}
             <button onClick={playAgainHandler}>Play again</button>
@@ -88,7 +88,7 @@ const App = () => {
       <header className="game-board__header">
         <h2>
           Next player :{" "}
-          <span className={letterColorClass}>{currentPlayer}</span>
+          <span className={currentLetterColorClass}>{currentPlayer}</span>
         </h2>
       </header>
       <div className="game-board__container">
