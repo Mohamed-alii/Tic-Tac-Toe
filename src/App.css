@@ -63,18 +63,18 @@
     color: var(--pink-color);
 }
 
+@media only screen and (max-width: 900px) {
+    .game-board__container
+    {
+        grid-template-columns: repeat(3 , 7rem);
+        grid-template-rows: repeat(3 , 7rem);
+    }
+}
+
 @media screen and (max-width: 500px) {
     .game-board__container
     {
         grid-template-columns: repeat(3 , 4rem);
         grid-template-rows: repeat(3 , 4rem);
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .game-board__container
-    {
-        grid-template-columns: repeat(3 , 7rem);
-        grid-template-rows: repeat(3 , 7rem);
     }
 }
