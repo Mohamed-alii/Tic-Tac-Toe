@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.game-board
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.overlay
+{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay__content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem 6rem;
+    border-radius: 5px;
+    background-color: var(--darkblue-color);
+    border: 3px solid var(--yellow-color);
+}
+.overlay__content h2
+{
+    padding: 1rem;
+    font-size: 2rem;
+    color: #9084c9;
+}
+.overlay__content button
+{
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 0.4rem;
+    cursor: pointer;
+    background-color: var(--yellow-color);
+    color: whitesmoke;
+}
+.game-board__header h2
+{
+    color: #9084c9;
+    padding: 2rem;
+}
+.game-board__container
+{
+    display: grid;
+    grid-template-columns: repeat(3 , 8rem);
+    grid-template-rows: repeat(3 , 8rem);
+    gap: 1rem;
+    justify-content: center;
+    border-radius: 5px;
+}
+.font--yellow{
+    color: var(--yellow-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.font--pink{
+    color: var(--pink-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 500px) {
+    .game-board__container
+    {
+        grid-template-columns: repeat(3 , 4rem);
+        grid-template-rows: repeat(3 , 4rem);
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 900px) {
+    .game-board__container
+    {
+        grid-template-columns: repeat(3 , 7rem);
+        grid-template-rows: repeat(3 , 7rem);
+    }
 }

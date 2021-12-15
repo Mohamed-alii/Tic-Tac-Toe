@@ -1,0 +1,11 @@
+.game-board__cell
+{
+    background-color: var(--darkblue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
