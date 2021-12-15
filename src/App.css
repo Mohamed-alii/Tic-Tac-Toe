@@ -66,8 +66,8 @@
 @media only screen and (max-width: 900px) {
     .game-board__container
     {
-        grid-template-columns: repeat(3 , 7rem);
-        grid-template-rows: repeat(3 , 7rem);
+        grid-template-columns: repeat(3 , 9rem);
+        grid-template-rows: repeat(3 , 9rem);
     }
     .overlay__content
     {
