@@ -78,8 +78,8 @@
 @media screen and (max-width: 500px) {
     .game-board__container
     {
-        grid-template-columns: repeat(3 , 5rem);
-        grid-template-rows: repeat(3 , 5rem);
+        grid-template-columns: repeat(3 , 6rem);
+        grid-template-rows: repeat(3 , 6rem);
     }
 }
 

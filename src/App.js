@@ -3,14 +3,14 @@ import "./App.css";
 import BoardCell from "./components/BoardCell";
 
 const App = () => {
-    
+
   const [currentPlayer, setCurrentPlayer] = useState("X");
   const [boardCells, setBoardCells] = useState(new Array(9).fill(""));
   const [winner, setWinner] = useState("");
   const [boardIsActive, setBoardIsActive] = useState(true);
 
   const letterColorClass = `${
-    currentPlayer === "X" ? "font--yellow" : "font--pink"
+    winner === "X" ? "font--yellow" : "font--pink"
   }`;
   const winnerPatterns = [
     [0, 1, 2],
