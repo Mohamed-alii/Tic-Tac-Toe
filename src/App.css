@@ -69,9 +69,21 @@
         grid-template-columns: repeat(3 , 7rem);
         grid-template-rows: repeat(3 , 7rem);
     }
+    .overlay__content
+    {
+        padding: 1.5rem 0.5rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
+    .game-board__container
+    {
+        grid-template-columns: repeat(3 , 5rem);
+        grid-template-rows: repeat(3 , 5rem);
+    }
+}
+
+@media screen and (max-width: 370px) {
     .game-board__container
     {
         grid-template-columns: repeat(3 , 4rem);
